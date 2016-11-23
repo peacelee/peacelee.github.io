@@ -1780,7 +1780,9 @@ body.archive-inner .archive-article-date .icon-clock {
 	#container, body, html {
 		height: auto;
 		overflow-x: hidden;
-		overflow-y: auto
+		overflow-y: auto；
+		height:100%;
+		background: #eaeaea;
 	}
 	.body-wrap {
 		margin-bottom: 0
@@ -1988,7 +1990,11 @@ body.archive-inner .archive-article-date .icon-clock {
 		margin-left: 0
 	}
 	#footer {
-		position: relative;
+		position: fixed;
+		left: 0;
+		text-align: center;
+		width: 100%;
+		line-height: 30px;
 		bottom: 0
 	}
 	#footer .footer-left {
