@@ -1777,13 +1777,6 @@ body.archive-inner .archive-article-date .icon-clock {
 	#mobile-nav .overlay {
 		opacity: 1;
 	}
-	#container, body, html {
-		height: auto;
-		overflow-x: hidden;
-		overflow-y: auto;
-		height:100%;
-		background: #eaeaea;
-	}
 	body{
 		padding-bottom: 30px;
 	}
