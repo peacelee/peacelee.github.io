@@ -1780,7 +1780,7 @@ body.archive-inner .archive-article-date .icon-clock {
 	#container, body, html {
 		height: auto;
 		overflow-x: hidden;
-		overflow-y: auto；
+		overflow-y: auto;
 		height:100%;
 		background: #eaeaea;
 	}
@@ -2667,7 +2667,4 @@ a.pswp__share--download:hover {
 .pswp__error-msg a {
 	color: #ccc;
 	text-decoration: underline
-}
-.js-archives-frame>html{
-	height: 100%
 }
