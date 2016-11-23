@@ -2668,3 +2668,6 @@ a.pswp__share--download:hover {
 	color: #ccc;
 	text-decoration: underline
 }
+.js-archives-frame>html{
+	height: 100%
+}
