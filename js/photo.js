@@ -18,9 +18,9 @@ define([], function () {
                 var html, li = "";
                 for (var i = begin; i < end && i < data.length; i++) {
                     li += '<li><div class="img-box">' +
-                        '<a class="img-bg" rel="external" href="https://github.com/peacelee/BlogBackup/master/photos/' + data[i] + '?raw=true" target="_blank"></a>' +
-                        '<img lazy-src="https://github.com/peacelee/BlogBackup/master/photos/' + data[i] + '?raw=true">' +
-                        '</div></li>';
+                        '<a class="img-bg" rel="example_group" href="https://github.com/peacelee/BlogBackup/master/photos/' + data[i] + '?raw=true"></a>' +
+                        '<img lazy-src="https://github.com/peacelee/BlogBackup/master/photos/' + data[i] + '?raw=true" />' +
+                        '</li>';
                 }
 
                 $(".img-box-ul").append(li);
