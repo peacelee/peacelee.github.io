@@ -1759,7 +1759,7 @@ body.archive-inner .archive-article-date .icon-clock {
 	text-shadow: 0 1px #fff;
 	position: absolute;
 	bottom: 30px;
-	opacity: .6;
+	opacity: 1;
 	width: 100%;
 	text-align: center
 }
