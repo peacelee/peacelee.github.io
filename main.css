@@ -1784,6 +1784,9 @@ body.archive-inner .archive-article-date .icon-clock {
 		height:100%;
 		background: #eaeaea;
 	}
+	body{
+		padding-bottom: 30px;
+	}
 	.body-wrap {
 		margin-bottom: 0
 	}
