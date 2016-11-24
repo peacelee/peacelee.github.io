@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://yoursite.com/photo/index.html">
 <meta property="og:site_name" content="Peale">
 <meta property="og:description" content="(function(u){var l;&quot;undefined&quot;!==typeof window?l=window:&quot;undefined&quot;!==typeof self&amp;&amp;(l=self);l.lazyload=u()})(function(){return function l(n,k,e){function r(g,m){if(!k[g]){if(!n[g]){var f=&quot;function&quot;==">
-<meta property="og:updated_time" content="2016-11-24T08:49:27.000Z">
+<meta property="og:updated_time" content="2016-11-24T10:07:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="相册">
 <meta name="twitter:description" content="(function(u){var l;&quot;undefined&quot;!==typeof window?l=window:&quot;undefined&quot;!==typeof self&amp;&amp;(l=self);l.lazyload=u()})(function(){return function l(n,k,e){function r(g,m){if(!k[g]){if(!n[g]){var f=&quot;function&quot;==">
@@ -55,6 +55,8 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/photo">相册</a></li>
+	        
+				<li><a href="/resource">资源</a></li>
 	        
 			</ul>
 		</nav>
@@ -115,6 +117,8 @@
 					<li><a href="/">主页</a></li>
 		        
 					<li><a href="/photo">相册</a></li>
+		        
+					<li><a href="/resource">资源</a></li>
 		        
 				</ul>
 			</nav>
@@ -605,8 +609,8 @@ var render = function(res) {
 		var data = res.list[j].arr;
 		var liTmpl = "";
 		for (var i = 0, len = data.link.length; i < len; i++) {
-      var minSrc = 'http://oh4ooxkax.bkt.clouddn.com/' + data.link[i] + '.jpg-min';
-			var src = 'http://oh4ooxkax.bkt.clouddn.com/' + data.link[i];
+      var minSrc = 'http://oh4xqnron.bkt.clouddn.com/' + data.link[i] + '.jpg-min';
+			var src = 'http://oh4xqnron.bkt.clouddn.com/' + data.link[i];
 			var type = data.type[i];
 			var target = (src + (type === 'video' ? '.mp4' : '.jpg'));
 			src += '.jpg';
@@ -669,22 +673,22 @@ var Ins = {
           "year": 2016,
           "month": 11,
           "src": [
-                  "http://oh4ooxkax.bkt.clouddn.com/IMG_20151121_083923.jpg", 
-                  "http://oh4ooxkax.bkt.clouddn.com/IMG_20151125_135129.jpg", 
-                  "http://oh4ooxkax.bkt.clouddn.com/IMG_20151211_121031.jpg", 
-                  "http://oh4ooxkax.bkt.clouddn.com/IMG_20160103_135919R.jpg", 
-                  "http://oh4ooxkax.bkt.clouddn.com/IMG_20160122_142919R.jpg", 
-                  "http://oh4ooxkax.bkt.clouddn.com/IMG_20160211_102752R.jpg", 
-                  "http://oh4ooxkax.bkt.clouddn.com/IMG_20160514_131053R.jpg"
+                  "http://oh4xqnron.bkt.clouddn.com/1611_1.jpg", 
+                  "http://oh4xqnron.bkt.clouddn.com/1611_2.jpg", 
+                  "http://oh4xqnron.bkt.clouddn.com/1611_3.jpg", 
+                  "http://oh4xqnron.bkt.clouddn.com/1611_4.jpg", 
+                  "http://oh4xqnron.bkt.clouddn.com/1611_5.jpg", 
+                  "http://oh4xqnron.bkt.clouddn.com/1611_6.jpg", 
+                  "http://oh4xqnron.bkt.clouddn.com/1611_7.jpg"
                 ],
           "link": [
-                    "IMG_20151121_083923", 
-                    "IMG_20151125_135129", 
-                    "IMG_20151211_121031", 
-                    "IMG_20160103_135919R", 
-                    "IMG_20160122_142919R", 
-                    "IMG_20160211_102752R", 
-                    "IMG_20160514_131053R"
+                    "1611_1", 
+                    "1611_2", 
+                    "1611_3", 
+                    "1611_4", 
+                    "1611_5", 
+                    "1611_6", 
+                    "1611_7"
                   ],
           "text": [
                     "雾霾天的大裤衩-北京",
@@ -721,7 +725,7 @@ window.onload = function() {
     <div class="article-info article-info-index">
       
       <a href="/photo/index.html" class="archive-article-date">
-  	<time datetime="2016-11-24T08:49:27.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-24</time>
+  	<time datetime="2016-11-24T10:07:15.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-24</time>
 </a>
       
       
