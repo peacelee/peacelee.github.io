@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>css选择器的特殊性 | Peale</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="什么是css选择器的特殊性？
+
+每个合法的文档都会生成一个结构树，根据元素的祖先、属性、兄弟、后代元素等等来创建选择器，然后进行样式声明。当通过使用不同的选择器来选择同一个元素并声明一样的属性时，就会产生声明冲突，那么这时用户代理会计算选择器的特殊性，具有最高特殊性的声明胜出，也就是我们常提到的css选择器权重。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css选择器的特殊性">
+<meta property="og:url" content="http://yoursite.com/2016/12/04/2016_12_4_specificity/index.html">
+<meta property="og:site_name" content="Peale">
+<meta property="og:description" content="什么是css选择器的特殊性？
+
+每个合法的文档都会生成一个结构树，根据元素的祖先、属性、兄弟、后代元素等等来创建选择器，然后进行样式声明。当通过使用不同的选择器来选择同一个元素并声明一样的属性时，就会产生声明冲突，那么这时用户代理会计算选择器的特殊性，具有最高特殊性的声明胜出，也就是我们常提到的css选择器权重。">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/specificity.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/style_cut.png">
+<meta property="og:updated_time" content="2016-12-04T15:35:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css选择器的特殊性">
+<meta name="twitter:description" content="什么是css选择器的特殊性？
+
+每个合法的文档都会生成一个结构树，根据元素的祖先、属性、兄弟、后代元素等等来创建选择器，然后进行样式声明。当通过使用不同的选择器来选择同一个元素并声明一样的属性时，就会产生声明冲突，那么这时用户代理会计算选择器的特殊性，具有最高特殊性的声明胜出，也就是我们常提到的css选择器权重。">
+<meta name="twitter:image" content="http://oh4xqnron.bkt.clouddn.com/specificity.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Peale" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/assets/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/assets/liping.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Peale</a></h1>
+		</hgroup>
+
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/photo">相册</a></li>
+	        
+				<li><a href="/resource">资源</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/peacelee" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/2118817892/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1" title="weibo">weibo</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Peale</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/assets/liping.png" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Peale</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/photo">相册</a></li>
+		        
+					<li><a href="/resource">资源</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/peacelee" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/2118817892/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        
+<article id="post-2016_12_4_specificity" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      css选择器的特殊性
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>什么是css选择器的特殊性？</strong></p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/specificity.png" alt="no can no bb..."></p>
+<p>每个合法的文档都会生成一个结构树，根据元素的祖先、属性、兄弟、后代元素等等来创建选择器，然后进行样式声明。当通过使用不同的选择器来选择同一个元素并声明一样的属性时，就会产生声明冲突，那么这时用户代理会计算选择器的特殊性，具有最高特殊性的声明胜出，也就是我们常提到的css选择器权重。<br><a id="more"></a></p>
+<p><strong>特殊性计算</strong><br>选择器的特殊性由选择器本身的组建确定。特殊性值表述为4个部分，如：0,0,0,0。</p>
+<ul>
+<li>内联样式，加 1,0,0,0。</li>
+<li>对于选择器中给定的各个ID属性值，加 0,1,0,0。</li>
+<li>对于选择器中给定的各个类属性值、属性选择或伪类，加 0,0,1,0。</li>
+<li>对于选择器中给定的各个元素和伪元素，加 0,0,0,1。</li>
+<li>结合符和通配选择器对特殊性没有任何贡献。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">例：</div><div class="line">div     &#123;color:red&#125;     /* 特殊性 = 0,0,0,1 */</div><div class="line">:before &#123;color:green&#125;   /* 特殊性 = 0,0,0,1 */</div><div class="line">.wrap   &#123;color:yellow&#125;  /* 特殊性 = 0,0,1,0 */</div><div class="line">[title] &#123;color:blue&#125;    /* 特殊性 = 0,0,1,0 */</div><div class="line">:hover  &#123;color:pink&#125;    /* 特殊性 = 0,0,1,0 */</div><div class="line">#wrap   &#123;color&#125;         /* 特殊性 = 0,1,0,0 */</div><div class="line">*       &#123;color:#555&#125;    /* 特殊性 = 0,0,0,0 */</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在任何情况下，用户代理都会确定哪些规则与一个元素匹配，计算出所有相关的声明及其特殊性，确定哪些规则胜出，然后将胜出的规则应用到元素，从而得到应用样式后的结果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">.box&#123; color: red&#125;</div><div class="line">div &#123; color:green;background:#000&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/style_cut.png" alt="chrome"></p>
+<p>注：通配符的特殊性为0,0,0,0（这个与根本没有特殊性是有区别的）。</p>
+<p><strong>继承</strong></p>
+<p>我们都知道有些声明不仅会应用到指定的元素，还会应用到它的后代元素，就是说声明继承给了后代。继承的值根本没有特殊性，比0,0,0,0还弱。之所以不要用通配符声明，是因为它的特殊性比继承强，会把本应该继承的声明干掉。</p>
+<p><strong>层叠</strong></p>
+<p>了解之后，有些人会问，如果特殊性相等的两个规则应用到同一个元素，怎么办呢？</p>
+<p>css2.1层叠规则如下：</p>
+<ul>
+<li>找出所有相关的规则，这些规则都包含与一个给定元素匹配的选择器。</li>
+<li>按显式特殊性对应用到该元素的所有声明排序，标志!important的规则的特殊性高于没有!important标志的规则（不推荐使用）。</li>
+<li>按特殊性对应用到给定元素的所有声明排序。有较高的特殊性的元素大于较低特殊性的元素</li>
+<li>按出现顺序对应用到给定元素的所有声明排序。一个声明在样式表或文档中越后出现，它的特殊性越大。如果样式表中有导入的样式表，一般认为出现在导入样式表中的声明在前，主样式表中的所有声明在后。</li>
+</ul>
+<p>注：在文档head的style里声明的样式是文档样式表一部分。</p>
+<p>W3C标准推荐链接样式顺序为什么是这样的？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">:link &#123;color:#FF0000;&#125;      /* 未被访问的链接 */</div><div class="line">:visited &#123;color:#00FF00;&#125;   /* 已被访问的链接 */</div><div class="line">:hover &#123;color:#FF00FF;&#125;     /* 鼠标指针移动到链接上 */</div><div class="line">:active &#123;color:#0000FF;&#125;    /* 正在被点击的链接 */</div><div class="line">当为链接的不同状态设置样式时，请按照以下次序规则：</div><div class="line">:hover 必须位于 :link 和 :visited 之后</div><div class="line">:active 必须位于 :hover 之后</div></pre></td></tr></table></figure></p>
+<p>通过对特殊性的了解，我们知道以上的特殊性都是一样：0,0,1,0。<br>那么如果要达到我们想要的效果，可以按先后顺序，同样的特殊性，靠后的才会胜出。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/04/2016_12_4_specificity/" class="archive-article-date">
+  	<time datetime="2016-12-04T12:08:27.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-04</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/11/30/2016_11_30_flex/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">flex布局</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+<section id="comments" style="padding:0 40px">
+
+  <!-- 多说评论框 start -->
+  <div id="ds-thread" class="ds-thread" data-thread-key="2016/12/04/2016_12_4_specificity/" data-title="css选择器的特殊性" data-url="http://yoursite.com/2016/12/04/2016_12_4_specificity/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"peacelee"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+</section>
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Peale
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/随笔-技术/" style="font-size: 10px;">随笔&技术</a>
+    			</div>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">生活不止眼前的苟且&lt;br&gt;还有诗和远方的田野</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
