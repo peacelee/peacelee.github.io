@@ -20,7 +20,7 @@
 每个合法的文档都会生成一个结构树，根据元素的祖先、属性、兄弟、后代元素等等来创建选择器，然后进行样式声明。当通过使用不同的选择器来选择同一个元素并声明一样的属性时，就会产生声明冲突，那么这时用户代理会计算选择器的特殊性，具有最高特殊性的声明胜出，也就是我们常提到的css选择器权重。">
 <meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/specificity.png">
 <meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/style_cut.png">
-<meta property="og:updated_time" content="2016-12-04T15:35:55.000Z">
+<meta property="og:updated_time" content="2016-12-04T15:53:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css选择器的特殊性">
 <meta name="twitter:description" content="什么是css选择器的特殊性？
@@ -163,7 +163,7 @@
         <p><strong>什么是css选择器的特殊性？</strong></p>
 <p><img src="http://oh4xqnron.bkt.clouddn.com/specificity.png" alt="no can no bb..."></p>
 <p>每个合法的文档都会生成一个结构树，根据元素的祖先、属性、兄弟、后代元素等等来创建选择器，然后进行样式声明。当通过使用不同的选择器来选择同一个元素并声明一样的属性时，就会产生声明冲突，那么这时用户代理会计算选择器的特殊性，具有最高特殊性的声明胜出，也就是我们常提到的css选择器权重。<br><a id="more"></a></p>
-<p><strong>特殊性计算</strong><br>选择器的特殊性由选择器本身的组建确定。特殊性值表述为4个部分，如：0,0,0,0。</p>
+<p><strong>特殊性计算</strong><br>选择器的特殊性由选择器本身的组件确定。特殊性值表述为4个部分，如：0,0,0,0。</p>
 <ul>
 <li>内联样式，加 1,0,0,0。</li>
 <li>对于选择器中给定的各个ID属性值，加 0,1,0,0。</li>
@@ -189,6 +189,9 @@
 <p>注：在文档head的style里声明的样式是文档样式表一部分。</p>
 <p>W3C标准推荐链接样式顺序为什么是这样的？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">:link &#123;color:#FF0000;&#125;      /* 未被访问的链接 */</div><div class="line">:visited &#123;color:#00FF00;&#125;   /* 已被访问的链接 */</div><div class="line">:hover &#123;color:#FF00FF;&#125;     /* 鼠标指针移动到链接上 */</div><div class="line">:active &#123;color:#0000FF;&#125;    /* 正在被点击的链接 */</div><div class="line">当为链接的不同状态设置样式时，请按照以下次序规则：</div><div class="line">:hover 必须位于 :link 和 :visited 之后</div><div class="line">:active 必须位于 :hover 之后</div></pre></td></tr></table></figure></p>
 <p>通过对特殊性的了解，我们知道以上的特殊性都是一样：0,0,1,0。<br>那么如果要达到我们想要的效果，可以按先后顺序，同样的特殊性，靠后的才会胜出。</p>
+<p><strong>结束</strong><br>又是一个雾霾的双休日，与哥们见面吃了个饭，聊着天，看着他目前状态，很替他开心，呵呵，他懂得！</p>
+<p>“毒死你个龟孙儿”用英语怎么说？ Welcome to Beijing !<br>“恶心他妈在路边嗷嗷大哭”，路人问：“为什么哭啊？”，她回答到：“因为恶心死啦…”。</p>
+<p>谁家玉笛暗飞声，散入春风满洛城。<br>此夜曲中闻折柳，何人不起故园情。</p>
 
       
     </div>
