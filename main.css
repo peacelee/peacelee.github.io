@@ -425,7 +425,8 @@ body {
 	right: 0;
 	background: #eaeaea;
 	left: 300px;
-	width: auto
+	width: auto;
+	min-height: 100%;
 }
 .mid-col.show {
 	-webkit-transform: translate3d(300px, 0, 0);
@@ -1132,7 +1133,7 @@ body.archive-inner .archive-article-date .icon-clock {
 	background: #fff
 }
 .archives-wrap:first-child {
-	margin-top: 30px
+	xmargin-top: 30px
 }
 .archives-wrap:last-child {
 	margin-bottom: 80px
