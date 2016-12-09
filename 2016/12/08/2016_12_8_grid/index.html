@@ -6,21 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>新博客，新篇章 | Peale</title>
+  <title>Grid布局指南 | Peale</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是一篇关于个人博客，自我纪录学习和分享的文章。">
+  <meta name="description" content="简介CSS网格布局（又称“网格”），是一种二维网格布局系统，它的目的是不对基于网格设计方式的用户界面做任何处理。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，同时遗漏了很多功能，例如垂直居中。后来flexbox(盒子布局)能简单的实现很多功">
 <meta property="og:type" content="article">
-<meta property="og:title" content="新博客，新篇章">
-<meta property="og:url" content="http://yoursite.com/2016/11/22/2016_11_22_newBlog/index.html">
+<meta property="og:title" content="Grid布局指南">
+<meta property="og:url" content="http://yoursite.com/2016/12/08/2016_12_8_grid/index.html">
 <meta property="og:site_name" content="Peale">
-<meta property="og:description" content="这是一篇关于个人博客，自我纪录学习和分享的文章。">
-<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/article161122_1.jpg">
-<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/article161122_2.jpg">
-<meta property="og:updated_time" content="2016-12-09T09:30:11.000Z">
+<meta property="og:description" content="简介CSS网格布局（又称“网格”），是一种二维网格布局系统，它的目的是不对基于网格设计方式的用户界面做任何处理。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，同时遗漏了很多功能，例如垂直居中。后来flexbox(盒子布局)能简单的实现很多功">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/article_161208.jpg">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-line.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-track.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-cell.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-area.png">
+<meta property="og:updated_time" content="2016-12-08T16:22:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="新博客，新篇章">
-<meta name="twitter:description" content="这是一篇关于个人博客，自我纪录学习和分享的文章。">
-<meta name="twitter:image" content="http://oh4xqnron.bkt.clouddn.com/article161122_1.jpg">
+<meta name="twitter:title" content="Grid布局指南">
+<meta name="twitter:description" content="简介CSS网格布局（又称“网格”），是一种二维网格布局系统，它的目的是不对基于网格设计方式的用户界面做任何处理。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，同时遗漏了很多功能，例如垂直居中。后来flexbox(盒子布局)能简单的实现很多功">
+<meta name="twitter:image" content="http://oh4xqnron.bkt.clouddn.com/article_161208.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Peale" type="application/atom+xml">
   
@@ -149,7 +152,7 @@ ga('send', 'pageview');
 
       <div class="body-wrap">
         
-<article id="post-2016_11_22_newBlog" class="article article-type-post" itemscope itemprop="blogPost">
+<article id="post-2016_12_8_grid" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -159,7 +162,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      新博客，新篇章
+      Grid布局指南
     </h1>
   
 
@@ -167,29 +170,66 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://oh4xqnron.bkt.clouddn.com/article161122_1.jpg" alt="风景" title="风景"></p>
-<p>昨天迎来了2016年的第一场雪，室外显得格外的寒冷，比较宅的我又多了个不愿出门的理由。平时休息也没有特别的爱好，就是吃、看看电影、学习、打羽毛球（近期才玩…），日子过的还算充实，也不知道是不是我这个年龄该有的状态。什么，年龄？shut up！本人18+，呵呵。</p>
+        <p><img src="http://oh4xqnron.bkt.clouddn.com/article_161208.jpg" alt="translation"></p>
+<p><strong>简介</strong><br>CSS网格布局（又称“网格”），是一种二维网格布局系统，它的目的是不对基于网格设计方式的用户界面做任何处理。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，同时遗漏了很多功能，例如垂直居中。后来<a href="http://peale.cn/2016/11/30/2016_11_30_flex/#more" target="_blank" rel="external">flexbox(盒子布局)</a>能简单的实现很多功能，但是它仅仅是一维布局，而不是复杂的二维布局，实际上它们（flexbox与grid）能很好的配合使用。Grid布局是第一个专门为解决布局问题而创建的CSS模块,它是2012年11月06日被成立的<a href="https://www.w3.org/TR/css3-grid-layout/" target="_blank" rel="external">草案</a>。</p>
 <a id="more"></a>
-<p>言归正传，今天写这篇无聊的文章主要是纪念下自己的新博客，其实之前一直有过这个念头，种种原因（开始找理由了）没有执行，意识到本人语言表达能力较弱，也算是个给自己锻炼的机会。这个博客主要是用来记录和学习用的，顺便和大家分享（瞅啥瞅？👇有评论，欢迎挑毛病）。</p>
-<p>想必会有人好奇，你这个博客是怎么做的？（路人：切…,想让我问你？就不问。）好吧，我还是厚着脸皮说出来吧，不然文章写不下去了，会的人你就当没看见（你得现有粉丝啊！！！）。这个博客是用HEXO+Github搭建的，不用你一分钱哦。</p>
-<p>什么是HEXO呢？Hexo是一个简单地、轻量地、基于Node的一个静态博客框架,可以方便的生成静态网页托管在github上。网上也有好多分享，一搜一大把，看的你眼花撩妹，no，是缭乱。在这里我就不在做重复的事情了（谁让人家写的那么好呢，自愧不如…），但是，但是，既然聊到这里了，不能让路人白白浪费时间，给大家分享些有关的链接，自己看去（学习靠自己，不懂就要问，前提是了解过后不明白再问！）。hexo官网资料很详细（路人：废话。我：我就是凑个数。），还提供很多主题，这个网站好像需要链VPN才能浏览（路人：你有VPN吗？ 我：VPN是什么？我不知道诶）。如果你尝试了，而且成功了，恭喜你，你真棒！</p>
-<p>由于是静态博客，所以得手工制作，听说“手工制造”价值不非！下面相关资料提供了Markdown语法手册，你可以用sublime安装MarkdownEditing、OmniMarkupPreviewer插件，然后进行文章编辑，编辑完后通过浏览器预览，很方便哦。</p>
-<p>相关链接资料：<br><a href="http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html#使用hexo写博客" target="_blank" rel="external">小茗的分享</a><br><a href="https://hexo.io/" target="_blank" rel="external">hexo官网</a><br><a href="http://blog.leanote.com/post/freewalk/Markdown-%E8%AF%AD%E6%B3%95%E6%89%8B%E5%86%8C#title-32" target="_blank" rel="external">Markdown语法手册</a><br><a href="http://www.jianshu.com/p/335b7d1be39e" target="_blank" rel="external">sublime markdown插件</a></p>
-<p><img src="http://oh4xqnron.bkt.clouddn.com/article161122_2.jpg" alt="风景" title="风景"></p>
-<p>又是一个24:00后睡觉，年纪大了，得早点睡咯。以上巴拉巴拉这么多，记录下，备忘，也希望路人有所收获。天气这么多冷，时刻提醒自己多穿点衣服，千万别觉得在暖气屋里太热就不多穿点出去了，你会后悔的，相信我。冬天的夜晚总是那么的寂静，暖暖的被窝让人很是踏实。</p>
-<p>日暮苍山远，天寒白屋贫。<br>柴门闻犬吠，风雪夜归人。</p>
+<p><strong>初步了解和浏览器支持</strong><br>使用Grid布局非常简单，你只需要给容器（container）定义：display:grid，并设置列（grid-template-columns）和 行（grid-template-rows）的大小，然后用grid-column和grid-row定义容器子元素（grid-item项目）的位置。与flexbox布局类似，一开始项目的排列顺序并不重要，可以放置在容器的任何位置，这也使得你非常容易通过媒体查询重新排列你的项目。想象一下，当你定义整个页面的布局时，你只需要几行CSS就可以完成页面重排以便适应各种屏幕宽度，这得有多么神奇！<br>好东西总是来的晚，不要焦躁，不要沮丧。活好每一天，自然就等到了。目前浏览器还不支持Grid布局，IE10和IE11支持老的语法。如果你想体验Grid布局的强大，推荐使用开通过体验新功能的Chrome, Opera 或 Firefox， Chrome:打开浏览器，输入chrome://flags，找到”experimental web platform features”，启用并重启浏览器；Opera：输入opera://flags，与Chrome一样；Firefox:输入layout.css.grid.enabled。</p>
+<p>浏览器支持情况：</p>
+<table>
+<thead>
+<tr>
+<th>Chrome</th>
+<th>Safari</th>
+<th>Firefox</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>29+ (Behind flag)</td>
+<td>Not supported</td>
+<td>40+ (Behind flag)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Opera</th>
+<th>IE</th>
+<th>Android/iOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>28+ (Behind flag)</td>
+<td>10+ (Old syntax)</td>
+<td>Not supported</td>
+</tr>
+</tbody>
+</table>
+<p><strong>重要术语</strong><br>在深入了解Grid布局概念之前，我们先了解一些术语。因为这些术语在概念上很相似，如果你不记住Grid定义的含义，会很容易将它们混淆，但是不用担心，这里术语很少。</p>
+<p>1.网格容器（Grid Container）<br>元素应用display:grid，它是其所有网格项的父元素。下面例子container就是网格容器。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">  &lt;div class=&quot;item item-1&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;item item-2&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;item item-3&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>2.网格项（Grid Item）<br>网格容器的子元素，下面的item元素是网格项，但sub-item不是。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;item&quot;&gt;</div><div class="line">    &lt;p class=&quot;sub-item&quot;&gt;&lt;/p&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>3.网格线（Grid Line）<br>组成网格线的分界线。它们可以是列网格线（column grid lines），也可以是行网格线（row grid lines）并且居于行或列的任意一侧，下面黄色线就是列网格线。</p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-line.png" alt="grid lines"></p>
+<p>网格轨道（Grid Track）<br>两个相邻的网格线之间为网格轨道。你可以认为它们是网格的列或行，下面在第二个和第三个网格线之间的黄色部分为网格轨道。</p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-track.png" alt="Grid Track"></p>
+<p>4.网格单元（Grid Cell）<br>两个相邻的列网格线和两个相邻的行网格线组成的是网格单元，它是最小的网格单元。下面行网格线1（row grid lines 1）、行网格线2（row grid lines 2）和列网格线1（column grid lines 1）、列网格线2（column grid lines2）组成的黄色区域为网格单元。</p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-cell.png" alt="Grid Cell"></p>
+<p>5.网格区（Grid Area）<br>网格区是由任意数量网格单元组成，下面行网格线1（row grid lines 1）、行网格线3（row grid lines 3）和列网格线1（column grid lines 1）、列网格线3（column grid lines3）组成的黄色区域为网格区。</p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-area.png" alt="Grid Area"></p>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/11/22/2016_11_22_newBlog/" class="archive-article-date">
-  	<time datetime="2016-11-22T14:44:03.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-22</time>
+      <a href="/2016/12/08/2016_12_8_grid/" class="archive-article-date">
+  	<time datetime="2016-12-08T01:56:54.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-08</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔-技术/">随笔&技术</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
 	</div>
 
       
@@ -202,15 +242,11 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2016/11/30/2016_11_30_flex/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          flex布局
-        
-      </div>
-    </a>
   
+    <a href="/2016/12/04/2016_12_4_specificity/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css选择器的特殊性</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -225,7 +261,7 @@ ga('send', 'pageview');
 <section id="comments" style="padding:0 40px">
 
   <!-- 多说评论框 start -->
-  <div id="ds-thread" class="ds-thread" data-thread-key="2016/11/22/2016_11_22_newBlog/" data-title="新博客，新篇章" data-url="http://yoursite.com/2016/11/22/2016_11_22_newBlog/"></div>
+  <div id="ds-thread" class="ds-thread" data-thread-key="2016/12/08/2016_12_8_grid/" data-title="Grid布局指南" data-url="http://yoursite.com/2016/12/08/2016_12_8_grid/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
