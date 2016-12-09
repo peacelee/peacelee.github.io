@@ -6,27 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>css选择器的特殊性 | Peale</title>
+  <title>Grid布局指南 | Peale</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是css选择器的特殊性？
-
-每个合法的文档都会生成一个结构树，根据元素的祖先、属性、兄弟、后代元素等等来创建选择器，然后进行样式声明。当通过使用不同的选择器来选择同一个元素并声明一样的属性时，就会产生声明冲突，那么这时用户代理会计算选择器的特殊性，具有最高特殊性的声明胜出，也就是我们常提到的css选择器权重。">
+  <meta name="description" content="简介CSS网格布局（又称“网格”），是一种二维网格布局系统，它的目的是不对基于网格设计方式的用户界面做任何处理。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，同时遗漏了很多功能，例如垂直居中。后来flexbox(盒子布局)能简单的实现很多功">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css选择器的特殊性">
-<meta property="og:url" content="http://yoursite.com/2016/12/04/2016_12_4_specificity/index.html">
+<meta property="og:title" content="Grid布局指南">
+<meta property="og:url" content="http://yoursite.com/2016/12/08/2016_12_8_grid/index.html">
 <meta property="og:site_name" content="Peale">
-<meta property="og:description" content="什么是css选择器的特殊性？
-
-每个合法的文档都会生成一个结构树，根据元素的祖先、属性、兄弟、后代元素等等来创建选择器，然后进行样式声明。当通过使用不同的选择器来选择同一个元素并声明一样的属性时，就会产生声明冲突，那么这时用户代理会计算选择器的特殊性，具有最高特殊性的声明胜出，也就是我们常提到的css选择器权重。">
-<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/specificity.png">
-<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/style_cut.png">
-<meta property="og:updated_time" content="2016-12-04T16:00:04.000Z">
+<meta property="og:description" content="简介CSS网格布局（又称“网格”），是一种二维网格布局系统，它的目的是不对基于网格设计方式的用户界面做任何处理。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，同时遗漏了很多功能，例如垂直居中。后来flexbox(盒子布局)能简单的实现很多功">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/article_161208.jpg">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-line.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-track.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-cell.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-area.png">
+<meta property="og:updated_time" content="2016-12-08T16:22:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css选择器的特殊性">
-<meta name="twitter:description" content="什么是css选择器的特殊性？
-
-每个合法的文档都会生成一个结构树，根据元素的祖先、属性、兄弟、后代元素等等来创建选择器，然后进行样式声明。当通过使用不同的选择器来选择同一个元素并声明一样的属性时，就会产生声明冲突，那么这时用户代理会计算选择器的特殊性，具有最高特殊性的声明胜出，也就是我们常提到的css选择器权重。">
-<meta name="twitter:image" content="http://oh4xqnron.bkt.clouddn.com/specificity.png">
+<meta name="twitter:title" content="Grid布局指南">
+<meta name="twitter:description" content="简介CSS网格布局（又称“网格”），是一种二维网格布局系统，它的目的是不对基于网格设计方式的用户界面做任何处理。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，同时遗漏了很多功能，例如垂直居中。后来flexbox(盒子布局)能简单的实现很多功">
+<meta name="twitter:image" content="http://oh4xqnron.bkt.clouddn.com/article_161208.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Peale" type="application/atom+xml">
   
@@ -155,7 +152,7 @@ ga('send', 'pageview');
 
       <div class="body-wrap">
         
-<article id="post-2016_12_4_specificity" class="article article-type-post" itemscope itemprop="blogPost">
+<article id="post-2016_12_8_grid" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -165,7 +162,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      css选择器的特殊性
+      Grid布局指南
     </h1>
   
 
@@ -173,45 +170,61 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>什么是css选择器的特殊性？</strong></p>
-<p><img src="http://oh4xqnron.bkt.clouddn.com/specificity.png" alt="no can no bb..."></p>
-<p>每个合法的文档都会生成一个结构树，根据元素的祖先、属性、兄弟、后代元素等等来创建选择器，然后进行样式声明。当通过使用不同的选择器来选择同一个元素并声明一样的属性时，就会产生声明冲突，那么这时用户代理会计算选择器的特殊性，具有最高特殊性的声明胜出，也就是我们常提到的css选择器权重。<br><a id="more"></a></p>
-<p><strong>特殊性计算</strong><br>选择器的特殊性由选择器本身的组件确定。特殊性值表述为4个部分，如：0,0,0,0。</p>
-<ul>
-<li>内联样式，加 1,0,0,0。</li>
-<li>对于选择器中给定的各个ID属性值，加 0,1,0,0。</li>
-<li>对于选择器中给定的各个类属性值、属性选择或伪类，加 0,0,1,0。</li>
-<li>对于选择器中给定的各个元素和伪元素，加 0,0,0,1。</li>
-<li>结合符和通配选择器对特殊性没有任何贡献。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">例：</div><div class="line">div     &#123;color:red&#125;     /* 特殊性 = 0,0,0,1 */</div><div class="line">:before &#123;color:green&#125;   /* 特殊性 = 0,0,0,1 */</div><div class="line">.wrap   &#123;color:yellow&#125;  /* 特殊性 = 0,0,1,0 */</div><div class="line">[title] &#123;color:blue&#125;    /* 特殊性 = 0,0,1,0 */</div><div class="line">:hover  &#123;color:pink&#125;    /* 特殊性 = 0,0,1,0 */</div><div class="line">#wrap   &#123;color&#125;         /* 特殊性 = 0,1,0,0 */</div><div class="line">*       &#123;color:#555&#125;    /* 特殊性 = 0,0,0,0 */</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>在任何情况下，用户代理都会确定哪些规则与一个元素匹配，计算出所有相关的声明及其特殊性，确定哪些规则胜出，然后将胜出的规则应用到元素，从而得到应用样式后的结果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">.box&#123; color: red&#125;</div><div class="line">div &#123; color:green;background:#000&#125;</div></pre></td></tr></table></figure></p>
-<p><img src="http://oh4xqnron.bkt.clouddn.com/style_cut.png" alt="chrome"></p>
-<p>注：通配符的特殊性为0,0,0,0（这个与根本没有特殊性是有区别的）。</p>
-<p><strong>继承</strong></p>
-<p>我们都知道有些声明不仅会应用到指定的元素，还会应用到它的后代元素，就是说声明继承给了后代。继承的值根本没有特殊性，比0,0,0,0还弱。之所以不要用通配符声明，是因为它的特殊性比继承强，会把本应该继承的声明干掉。</p>
-<p><strong>层叠</strong></p>
-<p>了解之后，有些人会问，如果特殊性相等的两个规则应用到同一个元素，怎么办呢？</p>
-<p>css2.1层叠规则如下：</p>
-<ul>
-<li>找出所有相关的规则，这些规则都包含与一个给定元素匹配的选择器。</li>
-<li>按显式特殊性对应用到该元素的所有声明排序，标志!important的规则的特殊性高于没有!important标志的规则（不推荐使用）。</li>
-<li>按特殊性对应用到给定元素的所有声明排序。有较高的特殊性的元素大于较低特殊性的元素</li>
-<li>按出现顺序对应用到给定元素的所有声明排序。一个声明在样式表或文档中越后出现，它的特殊性越大。如果样式表中有导入的样式表，一般认为出现在导入样式表中的声明在前，主样式表中的所有声明在后。</li>
-</ul>
-<p>注：在文档head的style里声明的样式是文档样式表一部分。</p>
-<p>W3C标准推荐链接样式顺序为什么是这样的？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">:link &#123;color:#FF0000;&#125;      /* 未被访问的链接 */</div><div class="line">:visited &#123;color:#00FF00;&#125;   /* 已被访问的链接 */</div><div class="line">:hover &#123;color:#FF00FF;&#125;     /* 鼠标指针移动到链接上 */</div><div class="line">:active &#123;color:#0000FF;&#125;    /* 正在被点击的链接 */</div><div class="line">当为链接的不同状态设置样式时，请按照以下次序规则：</div><div class="line">:hover 必须位于 :link 和 :visited 之后</div><div class="line">:active 必须位于 :hover 之后</div></pre></td></tr></table></figure></p>
-<p>通过对特殊性的了解，我们知道以上的特殊性都是一样：0,0,1,0。<br>那么如果要达到我们想要的效果，可以按先后顺序，同样的特殊性，靠后的才会胜出。</p>
-<p><strong>结束</strong><br>又是一个雾霾的双休日，与哥们见面吃了个饭，聊着天，看着他目前状态，很替他开心，呵呵，他懂得！</p>
-<p>“毒死你个龟孙儿”用英语怎么说？ Welcome to Beijing !<br>“恶心他妈在路边嗷嗷大哭”，路人问：“为什么哭啊？”，她回答：“因为恶心死啦…”。</p>
-<p>谁家玉笛暗飞声，散入春风满洛城。<br>此夜曲中闻折柳，何人不起故园情。</p>
+        <p><img src="http://oh4xqnron.bkt.clouddn.com/article_161208.jpg" alt="translation"></p>
+<p><strong>简介</strong><br>CSS网格布局（又称“网格”），是一种二维网格布局系统，它的目的是不对基于网格设计方式的用户界面做任何处理。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，同时遗漏了很多功能，例如垂直居中。后来<a href="http://peale.cn/2016/11/30/2016_11_30_flex/#more" target="_blank" rel="external">flexbox(盒子布局)</a>能简单的实现很多功能，但是它仅仅是一维布局，而不是复杂的二维布局，实际上它们（flexbox与grid）能很好的配合使用。Grid布局是第一个专门为解决布局问题而创建的CSS模块,它是2012年11月06日被成立的<a href="https://www.w3.org/TR/css3-grid-layout/" target="_blank" rel="external">草案</a>。</p>
+<a id="more"></a>
+<p><strong>初步了解和浏览器支持</strong><br>使用Grid布局非常简单，你只需要给容器（container）定义：display:grid，并设置列（grid-template-columns）和 行（grid-template-rows）的大小，然后用grid-column和grid-row定义容器子元素（grid-item项目）的位置。与flexbox布局类似，一开始项目的排列顺序并不重要，可以放置在容器的任何位置，这也使得你非常容易通过媒体查询重新排列你的项目。想象一下，当你定义整个页面的布局时，你只需要几行CSS就可以完成页面重排以便适应各种屏幕宽度，这得有多么神奇！<br>好东西总是来的晚，不要焦躁，不要沮丧。活好每一天，自然就等到了。目前浏览器还不支持Grid布局，IE10和IE11支持老的语法。如果你想体验Grid布局的强大，推荐使用开通过体验新功能的Chrome, Opera 或 Firefox， Chrome:打开浏览器，输入chrome://flags，找到”experimental web platform features”，启用并重启浏览器；Opera：输入opera://flags，与Chrome一样；Firefox:输入layout.css.grid.enabled。</p>
+<p>浏览器支持情况：</p>
+<table>
+<thead>
+<tr>
+<th>Chrome</th>
+<th>Safari</th>
+<th>Firefox</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>29+ (Behind flag)</td>
+<td>Not supported</td>
+<td>40+ (Behind flag)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Opera</th>
+<th>IE</th>
+<th>Android/iOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>28+ (Behind flag)</td>
+<td>10+ (Old syntax)</td>
+<td>Not supported</td>
+</tr>
+</tbody>
+</table>
+<p><strong>重要术语</strong><br>在深入了解Grid布局概念之前，我们先了解一些术语。因为这些术语在概念上很相似，如果你不记住Grid定义的含义，会很容易将它们混淆，但是不用担心，这里术语很少。</p>
+<p>1.网格容器（Grid Container）<br>元素应用display:grid，它是其所有网格项的父元素。下面例子container就是网格容器。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">  &lt;div class=&quot;item item-1&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;item item-2&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;item item-3&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>2.网格项（Grid Item）<br>网格容器的子元素，下面的item元素是网格项，但sub-item不是。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;item&quot;&gt;</div><div class="line">    &lt;p class=&quot;sub-item&quot;&gt;&lt;/p&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>3.网格线（Grid Line）<br>组成网格线的分界线。它们可以是列网格线（column grid lines），也可以是行网格线（row grid lines）并且居于行或列的任意一侧，下面黄色线就是列网格线。</p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-line.png" alt="grid lines"></p>
+<p>网格轨道（Grid Track）<br>两个相邻的网格线之间为网格轨道。你可以认为它们是网格的列或行，下面在第二个和第三个网格线之间的黄色部分为网格轨道。</p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-track.png" alt="Grid Track"></p>
+<p>4.网格单元（Grid Cell）<br>两个相邻的列网格线和两个相邻的行网格线组成的是网格单元，它是最小的网格单元。下面行网格线1（row grid lines 1）、行网格线2（row grid lines 2）和列网格线1（column grid lines 1）、列网格线2（column grid lines2）组成的黄色区域为网格单元。</p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-cell.png" alt="Grid Cell"></p>
+<p>5.网格区（Grid Area）<br>网格区是由任意数量网格单元组成，下面行网格线1（row grid lines 1）、行网格线3（row grid lines 3）和列网格线1（column grid lines 1）、列网格线3（column grid lines3）组成的黄色区域为网格区。</p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-area.png" alt="Grid Area"></p>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/12/04/2016_12_4_specificity/" class="archive-article-date">
-  	<time datetime="2016-12-04T12:08:27.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-04</time>
+      <a href="/2016/12/08/2016_12_8_grid/" class="archive-article-date">
+  	<time datetime="2016-12-08T01:56:54.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-08</time>
 </a>
       
 	<div class="article-tag tagcloud">
@@ -229,18 +242,9 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2016/12/08/2016_12_8_grid/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Grid布局指南
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/11/30/2016_11_30_flex/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">flex布局</div>
+    <a href="/2016/12/04/2016_12_4_specificity/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css选择器的特殊性</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -257,7 +261,7 @@ ga('send', 'pageview');
 <section id="comments" style="padding:0 40px">
 
   <!-- 多说评论框 start -->
-  <div id="ds-thread" class="ds-thread" data-thread-key="2016/12/04/2016_12_4_specificity/" data-title="css选择器的特殊性" data-url="http://yoursite.com/2016/12/04/2016_12_4_specificity/"></div>
+  <div id="ds-thread" class="ds-thread" data-thread-key="2016/12/08/2016_12_8_grid/" data-title="Grid布局指南" data-url="http://yoursite.com/2016/12/08/2016_12_8_grid/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
