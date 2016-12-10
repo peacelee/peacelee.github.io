@@ -8,21 +8,64 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Grid布局指南 | Peale</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="简介CSS网格布局（又称“网格”），是一种二维网格布局系统，它的目的是不对基于网格设计方式的用户界面做任何处理。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，同时遗漏了很多功能，例如垂直居中。后来flexbox(盒子布局)能简单的实现很多功">
+  <meta name="description" content="简介CSS网格布局（又称“网格”），是一种二维网格布局系统，它的目的是对基于网格设计方式的用户界面不做任何处理。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，遗漏了很多功能，例如垂直居中。后来出了flexbox(盒子布局)，解决了很多布局问">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Grid布局指南">
 <meta property="og:url" content="http://yoursite.com/2016/12/08/2016_12_8_grid/index.html">
 <meta property="og:site_name" content="Peale">
-<meta property="og:description" content="简介CSS网格布局（又称“网格”），是一种二维网格布局系统，它的目的是不对基于网格设计方式的用户界面做任何处理。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，同时遗漏了很多功能，例如垂直居中。后来flexbox(盒子布局)能简单的实现很多功">
+<meta property="og:description" content="简介CSS网格布局（又称“网格”），是一种二维网格布局系统，它的目的是对基于网格设计方式的用户界面不做任何处理。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，遗漏了很多功能，例如垂直居中。后来出了flexbox(盒子布局)，解决了很多布局问">
 <meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/article_161208.jpg">
 <meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-line.png">
 <meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-track.png">
 <meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-cell.png">
 <meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-area.png">
-<meta property="og:updated_time" content="2016-12-08T16:22:36.000Z">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-numbers.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-names.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-template-areas.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-column-row-gap.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-justify-items-start.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-justify-items-end.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-justify-items-center.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-justify-items-stretch.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-align-items-start.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-align-items-end.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-align-items-center.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-align-items-stretch.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-justify-content-start.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-justify-content-end.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-justify-content-center.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-justify-content-stretch.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-justify-content-space-around.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-justify-content-space-between.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-justify-content-space-evenly.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-align-content-start.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-align-content-end.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-align-content-center.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-align-content-stretch.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-align-content-space-around.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-align-content-space-between.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-align-content-space-evenly.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-auto.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/implicit-tracks.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/implicit-tracks-with-widths.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-auto-flow-row.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-auto-flow-column.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-start-end-a.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-start-end-b.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-start-end-c.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-start-end-d.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-justify-self-start.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-justify-self-end.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-justify-self-center.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-justify-self-stretch.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-align-self-start.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-align-self-end.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-align-self-center.png">
+<meta property="og:image" content="http://oh4xqnron.bkt.clouddn.com/grid-align-self-stretch.png">
+<meta property="og:updated_time" content="2016-12-10T14:27:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Grid布局指南">
-<meta name="twitter:description" content="简介CSS网格布局（又称“网格”），是一种二维网格布局系统，它的目的是不对基于网格设计方式的用户界面做任何处理。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，同时遗漏了很多功能，例如垂直居中。后来flexbox(盒子布局)能简单的实现很多功">
+<meta name="twitter:description" content="简介CSS网格布局（又称“网格”），是一种二维网格布局系统，它的目的是对基于网格设计方式的用户界面不做任何处理。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，遗漏了很多功能，例如垂直居中。后来出了flexbox(盒子布局)，解决了很多布局问">
 <meta name="twitter:image" content="http://oh4xqnron.bkt.clouddn.com/article_161208.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Peale" type="application/atom+xml">
@@ -171,9 +214,9 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p><img src="http://oh4xqnron.bkt.clouddn.com/article_161208.jpg" alt="translation"></p>
-<p><strong>简介</strong><br>CSS网格布局（又称“网格”），是一种二维网格布局系统，它的目的是不对基于网格设计方式的用户界面做任何处理。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，同时遗漏了很多功能，例如垂直居中。后来<a href="http://peale.cn/2016/11/30/2016_11_30_flex/#more" target="_blank" rel="external">flexbox(盒子布局)</a>能简单的实现很多功能，但是它仅仅是一维布局，而不是复杂的二维布局，实际上它们（flexbox与grid）能很好的配合使用。Grid布局是第一个专门为解决布局问题而创建的CSS模块,它是2012年11月06日被成立的<a href="https://www.w3.org/TR/css3-grid-layout/" target="_blank" rel="external">草案</a>。</p>
+<p><strong>简介</strong><br>CSS网格布局（又称“网格”），是一种二维网格布局系统，它的目的是对基于网格设计方式的用户界面不做任何处理。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，遗漏了很多功能，例如垂直居中。后来出了<a href="http://peale.cn/2016/11/30/2016_11_30_flex/#more" target="_blank" rel="external">flexbox(盒子布局)</a>，解决了很多布局问题，但是它仅仅是一维布局，而不是复杂的二维布局，实际上它们（flexbox与grid）能很好的配合使用。Grid布局是第一个专门为解决布局问题而创建的CSS模块,2012年11月06日成立<a href="https://www.w3.org/TR/css3-grid-layout/" target="_blank" rel="external">草案</a>。</p>
 <a id="more"></a>
-<p><strong>初步了解和浏览器支持</strong><br>使用Grid布局非常简单，你只需要给容器（container）定义：display:grid，并设置列（grid-template-columns）和 行（grid-template-rows）的大小，然后用grid-column和grid-row定义容器子元素（grid-item项目）的位置。与flexbox布局类似，一开始项目的排列顺序并不重要，可以放置在容器的任何位置，这也使得你非常容易通过媒体查询重新排列你的项目。想象一下，当你定义整个页面的布局时，你只需要几行CSS就可以完成页面重排以便适应各种屏幕宽度，这得有多么神奇！<br>好东西总是来的晚，不要焦躁，不要沮丧。活好每一天，自然就等到了。目前浏览器还不支持Grid布局，IE10和IE11支持老的语法。如果你想体验Grid布局的强大，推荐使用开通过体验新功能的Chrome, Opera 或 Firefox， Chrome:打开浏览器，输入chrome://flags，找到”experimental web platform features”，启用并重启浏览器；Opera：输入opera://flags，与Chrome一样；Firefox:输入layout.css.grid.enabled。</p>
+<p><strong>初步了解和浏览器支持</strong><br>使用Grid布局非常简单，你只需要给容器（container）定义：display:grid，并设置列（grid-template-columns）和 行（grid-template-rows）的大小，然后用grid-column和grid-row定义容器子元素（grid-item项目）的位置。与flexbox布局类似，一开始项目的排列顺序并不重要，可以放置在容器的任何位置，这也使得你非常容易通过媒体查询重新排列你的项目。想象一下，当你定义整个页面的布局时，你只需要几行CSS就可以完成页面重排以便适应各种屏幕宽度，这得有多么神奇！<br>好东西总是来的晚，不要焦躁，不要沮丧。活好每一天，自然就等到了。目前浏览器还不支持Grid布局，IE10和IE11支持老的语法。如果你想体验Grid布局的强大，推荐使用开通过“体验新功能”的Chrome, Opera 或 Firefox， Chrome:打开浏览器，输入chrome://flags，找到”experimental web platform features”，启用并重启浏览器；Opera：输入opera://flags，与Chrome一样；Firefox:输入layout.css.grid.enabled。</p>
 <p>浏览器支持情况：</p>
 <table>
 <thead>
@@ -207,17 +250,221 @@ ga('send', 'pageview');
 </tr>
 </tbody>
 </table>
-<p><strong>重要术语</strong><br>在深入了解Grid布局概念之前，我们先了解一些术语。因为这些术语在概念上很相似，如果你不记住Grid定义的含义，会很容易将它们混淆，但是不用担心，这里术语很少。</p>
+<p><br><br><strong>重要术语</strong><br>在深入了解Grid布局概念之前，我们先了解一些术语。因为这些术语在概念上很相似，如果你不记住Grid定义的含义，会很容易将它们混淆，但是不用担心，这里术语很少。</p>
 <p>1.网格容器（Grid Container）<br>元素应用display:grid，它是其所有网格项的父元素。下面例子container就是网格容器。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">  &lt;div class=&quot;item item-1&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;item item-2&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;item item-3&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
 <p>2.网格项（Grid Item）<br>网格容器的子元素，下面的item元素是网格项，但sub-item不是。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt; </div><div class="line">  &lt;div class=&quot;item&quot;&gt;</div><div class="line">    &lt;p class=&quot;sub-item&quot;&gt;&lt;/p&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
 <p>3.网格线（Grid Line）<br>组成网格线的分界线。它们可以是列网格线（column grid lines），也可以是行网格线（row grid lines）并且居于行或列的任意一侧，下面黄色线就是列网格线。</p>
 <p><img src="http://oh4xqnron.bkt.clouddn.com/grid-line.png" alt="grid lines"></p>
-<p>网格轨道（Grid Track）<br>两个相邻的网格线之间为网格轨道。你可以认为它们是网格的列或行，下面在第二个和第三个网格线之间的黄色部分为网格轨道。</p>
+<p>4.网格轨道（Grid Track）<br>两个相邻的网格线之间为网格轨道。你可以认为它们是网格的列或行，下面在第二个和第三个网格线之间的黄色部分为网格轨道。</p>
 <p><img src="http://oh4xqnron.bkt.clouddn.com/grid-track.png" alt="Grid Track"></p>
-<p>4.网格单元（Grid Cell）<br>两个相邻的列网格线和两个相邻的行网格线组成的是网格单元，它是最小的网格单元。下面行网格线1（row grid lines 1）、行网格线2（row grid lines 2）和列网格线1（column grid lines 1）、列网格线2（column grid lines2）组成的黄色区域为网格单元。</p>
+<p>5.网格单元（Grid Cell）<br>两个相邻的列网格线和两个相邻的行网格线组成的是网格单元，它是最小的网格单元。下面行网格线1（row grid lines 1）、行网格线2（row grid lines 2）和列网格线1（column grid lines 1）、列网格线2（column grid lines2）组成的黄色区域为网格单元。</p>
 <p><img src="http://oh4xqnron.bkt.clouddn.com/grid-cell.png" alt="Grid Cell"></p>
-<p>5.网格区（Grid Area）<br>网格区是由任意数量网格单元组成，下面行网格线1（row grid lines 1）、行网格线3（row grid lines 3）和列网格线1（column grid lines 1）、列网格线3（column grid lines3）组成的黄色区域为网格区。</p>
+<p>6.网格区（Grid Area）<br>网格区是由任意数量网格单元组成，下面行网格线1（row grid lines 1）、行网格线3（row grid lines 3）和列网格线1（column grid lines 1）、列网格线3（column grid lines3）组成的黄色区域为网格区。</p>
 <p><img src="http://oh4xqnron.bkt.clouddn.com/grid-area.png" alt="Grid Area"></p>
+<p><strong>设置在网格容器上的属性</strong></p>
+<ul>
+<li>display</li>
+<li>grid-template-columns</li>
+<li>grid-template-rows</li>
+<li>grid-template-areas</li>
+<li>grid-column-gap</li>
+<li>grid-row-gap</li>
+<li>grid-gap</li>
+<li>justify-items</li>
+<li>align-items</li>
+<li>justify-content</li>
+<li>align-content</li>
+<li>grid-auto-columns</li>
+<li>grid-auto-rows</li>
+<li>grid-auto-flow</li>
+<li>grid<br><br></li>
+</ul>
+<p>1. display: grid | inline-grid | subgrid;</p>
+<p>属性值：<br>grid:生成块级网格<br>inline-grid:生成行内网格<br>subgrid:如果网格容器本身是网格项（嵌套网格容器），此属性用来继承其父网格容器的列、行大小。<br>注：当元素设置了网格布局，column、float、clear、vertical-align属性无效。</p>
+<p>2. grid-template-columns:(track-size) ... | (line-name) (track-size) ...;grid-template-rows: (track-size)... | (line-name) (track-size) ...;</p>
+<p>用一组值设置行和列的大小，在行轨道或列轨道两边是网格线。</p>
+<p>属性值：<br>轨道大小(track-size):可以使用css长度，百分比或用分数（用fr单位）。<br>网格线名字(line-name):你可以选择任何名字。</p>
+<p>例子：<br>当你设置行或列大小为auto时，网格会自动分配空间和网格线名称。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    grid-template-columns: 40px 50px auto 50px 40px;</div><div class="line">    grid-template-rows: 25% 100px auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-numbers.png" alt="grid-numbers"></p>
+<p>你也可以给网格线定义名字，注意名字需要写在[]里面。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];</div><div class="line">    grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-names.png" alt="grid-names"></p>
+<p>每条网格线可以有多个名字，例如上面行的第二条线有两个名字，分别是row1-end和row2-start。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    grid-template-rows: [row1-start] 25% [row1-end row2-start] 25% [row2-end];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果你定义包含重复部分，可以使用repeat()简化。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    grid-template-columns: repeat(3, 20px [col-start]) 5%;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面等同于下面：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    grid-template-columns: 20px [col-start] 20px [col-start] 20px [col-start] 5%;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>用fr单位可以将容器分为几等份，例如下面分成三等份。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    grid-template-columns: 1fr 1fr 1fr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果fr单位和实际值一起使用，设置fr的行或列将分(除了实际值)剩余部分。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    grid-template-columns: 1fr 50px 1fr 1fr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>3.grid-template-areas</p>
+<p>通过获取网格项中的grid-area属性值（名称），来定义网格模版。重复网格区（grid-area）名称将跨越网格单元格，‘.’代表空网格单元。</p>
+<p>属性值：<br>grid-area-name: 网格项的grid-area属性值（名字）<br>.: 空网格单元<br>none: 不定义网格区域</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">.item-a&#123;</div><div class="line">  grid-area: header;</div><div class="line">&#125;</div><div class="line">.item-b&#123;</div><div class="line">  grid-area: main;</div><div class="line">&#125;</div><div class="line">.item-c&#123;</div><div class="line">  grid-area: sidebar;</div><div class="line">&#125;</div><div class="line">.item-d&#123;</div><div class="line">  grid-area: footer;</div><div class="line">&#125;</div><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    grid-template-columns: 50px 50px 50px 50px;</div><div class="line">    grid-template-rows: auto;</div><div class="line">    grid-template-areas: &quot;header header header header&quot;</div><div class="line">                         &quot;main main . sidebar&quot;</div><div class="line">                         &quot;footer footer footer footer&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面代码示例会创建四列三行网格，第一行将是header，第二行前两个网格单元是main部分、第三个为空网格单元、第四个为sliderbar，第三行是footer。</p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-template-areas.png" alt="grid-template-areas"></p>
+<p>4. grid-column-gap 和 grid-row-gap</p>
+<p>网格单元间距。</p>
+<p>属性值：<br>网格线间距(line-size): 单位值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    grid-column-gap: (line-size);</div><div class="line">    grid-row-gap: (line-size);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    grid-template-columns: 100px 50px 100px;</div><div class="line">    grid-template-rows: 80px auto 80px; </div><div class="line">    grid-column-gap: 10px;</div><div class="line">    grid-row-gap: 15px;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-column-row-gap.png" alt="grid-column-row-gap"></p>
+<p>注：间隔仅仅作用在网格单元之间，不作用在容器边缘。</p>
+<p>5. grid-gap</p>
+<p>是grid-column-gap 和 grid-row-gap简写。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    grid-gap: (grid-column-gap) (grid-row-gap);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    grid-template-columns: 100px 50px 100px;</div><div class="line">    grid-template-rows: 80px auto 80px; </div><div class="line">    grid-gap: 10px 15px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>注：如果只设置一个值，那么grid-column-gap 和 grid-row-gap都为那个值。</p>
+<p>6. justify-items</p>
+<p>垂直于列网格线对齐，适用于网格容器里的所有网格项。</p>
+<p>属性值：<br>start:   左对齐。<br>end:     右对齐。<br>center:  居中对齐。<br>stretch: 填满（默认）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    justify-items: start | end | center | stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    justify-items: start;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-justify-items-start.png" alt="grid-justify-items-start"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    justify-items: end;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-justify-items-end.png" alt="grid-justify-items-end"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    justify-items: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-justify-items-center.png" alt="grid-justify-items-center"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    justify-items: stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-justify-items-stretch.png" alt="grid-justify-items-stretch"></p>
+<p>7. align-items</p>
+<p>垂直于行网格线对齐，适用于网格容器里的所有网格项。</p>
+<p>属性值：<br>start：  顶部对齐。<br>end：    底部对齐。<br>center： 居中对齐。<br>stretch：填满（默认）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    align-items: start | end | center | stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    align-items: start;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-align-items-start.png" alt="grid-align-items-start"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    align-items: end;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-align-items-end.png" alt="grid-align-items-end"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    align-items: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-align-items-center.png" alt="grid-align-items-center"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    align-items: stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-align-items-stretch.png" alt="grid-align-items-stretch"></p>
+<p>8. justify-content</p>
+<p>如果用像px非弹性单位定义的话，总网格区域大小有可能小于网格容器，这时候你可以设置网格的对齐方式（垂直于列网格线对齐）。</p>
+<p>属性值：<br>start: 左对齐。<br>end: 右对齐。<br>center: 居中对齐。<br>stretch: 填满网格容器。<br>space-around: 网格项两边间距相等，网格项之间间隔是单侧的2倍。<br>space-between: 两边对齐，网格项之间间隔相等。<br>space-evenly: 网格项间隔相等。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    justify-content: start | end | center | stretch | space-around | space-between | space-evenly;    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    justify-content: start;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-justify-content-start.png" alt="grid-justify-content-start"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    justify-content: end;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-justify-content-end.png" alt="grid-justify-content-end"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    justify-content: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-justify-content-center.png" alt="grid-justify-content-center"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    justify-content: stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-justify-content-stretch.png" alt="grid-justify-content-stretch"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    justify-content: space-around;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-justify-content-space-around.png" alt="grid-justify-content-space-around"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    justify-content: space-between;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-justify-content-space-between.png" alt="grid-justify-content-space-between"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    justify-content: space-evenly;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-justify-content-space-evenly.png" alt="grid-justify-content-space-evenly"></p>
+<p>9. align-content</p>
+<p>如果用像px非弹性单位定义的话，总网格区域大小有可能小于网格容器，这时候你可以设置网格的对齐方式（垂直于行网格线对齐）。</p>
+<p>属性值：<br>start: 顶部对齐。<br>end: 底部对齐。<br>center: 居中对齐。<br>stretch: 填满网格容器。<br>space-around: 网格项两边间距相等，网格项之间间隔是单侧的2倍。<br>space-between: 两边对齐，网格项之间间隔相等。<br>space-evenly: 网格项间隔相等。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    align-content: start | end | center | stretch | space-around | space-between | space-evenly;    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    align-content: start; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-align-content-start.png" alt="grid-align-content-start"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    align-content: end; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-align-content-end.png" alt="grid-align-content-end"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    align-content: center; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-align-content-center.png" alt="grid-align-content-center"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    align-content: stretch; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-align-content-stretch.png" alt="grid-align-content-stretch"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    align-content: space-around; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-align-content-space-around.png" alt="grid-align-content-space-around"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    align-content: space-between; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-align-content-space-between.png" alt="grid-align-content-space-between"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    align-content: space-evenly; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-align-content-space-evenly.png" alt="grid-align-content-space-evenly"></p>
+<p>10. grid-auto-columns 和 grid-auto-rows</p>
+<p>自动生成隐式网格轨道（列和行），当你定位网格项超出网格容器范围时，将自动创建隐式网格轨道。</p>
+<p>属性值：<br>网格轨道大小(track-size): 可以是固定值，百分比或者是分数（fr单位）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    grid-auto-columns: (track-size) ...;</div><div class="line">    grid-auto-rows: (track-size) ...;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>为了说明隐式网格轨道是怎么创建的，我们先看下面列子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    grid-template-columns: 60px 60px;</div><div class="line">    grid-template-rows: 90px 90px</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-auto.png" alt="grid-auto"></p>
+<p>这是2✖️2的网格，但是我们来用grid-column 和 grid-row给网格项定位如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.item-a&#123;</div><div class="line">    grid-column: 1 / 2;</div><div class="line">    grid-row: 2 / 3;</div><div class="line">&#125;</div><div class="line">.item-b&#123;</div><div class="line">    grid-column: 5 / 6;</div><div class="line">    grid-row: 2 / 3;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/implicit-tracks.png" alt="implicit-tracks"></p>
+<p>我们可以看出，网格项item-b定位在第五根列网格线（column line 5 ）和第六根列网格线（column line 6 ）之间。但是我们网格容器根本不存在这两条网格线，所以就用两个0宽度来填充。在这里我们可以用网格自动行（grid-auto-rows）和网格自动列（grid-auto-columns）来定义这些隐式轨道宽度。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display:grid;</div><div class="line">    grid-auto-columns: 60px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/implicit-tracks-with-widths.png" alt="implicit-tracks-with-widths"></p>
+<p>11. grid-auto-flow : row（默认） | column | dense ;</p>
+<p>在没有设置网格项的位置时，这个属性控制网格项怎样排列。</p>
+<p>属性值：<br>row: 按照行依次从左到右排列。<br>column: 按照列依次从上倒下排列。<br>dense: 按先后顺序排列。</p>
+<p>来看看下面结构：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;section class=&quot;container&quot;&gt;</div><div class="line">    &lt;div class=&quot;item-a&quot;&gt;item-a&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;item-b&quot;&gt;item-b&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;item-c&quot;&gt;item-c&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;item-d&quot;&gt;item-d&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;item-e&quot;&gt;item-e&lt;/div&gt;</div><div class="line">&lt;/section&gt;</div></pre></td></tr></table></figure></p>
+<p>下面定义5列2行网格，同时定义grid-auto-flow：row。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    display: grid;</div><div class="line">    grid-template-columns: 60px 60px 60px 60px 60px;</div><div class="line">    grid-template-rows: 30px 30px;</div><div class="line">    grid-auto-flow: row;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>像下面布局网格项。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.item-a&#123;</div><div class="line">    grid-column: 1;</div><div class="line">    grid-row: 1 / 3;</div><div class="line">&#125;</div><div class="line">.item-e&#123;</div><div class="line">    grid-column: 5;</div><div class="line">    grid-row: 1 / 3;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>由于我们设置了grid-auto-flow：row，item-b、item-c和item-d在行上是从左到右排列，如下：</p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-auto-flow-row.png" alt="grid-auto-flow-row"></p>
+<p>如果我们设置 grid-auto-flow: column;结果如下：</p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-auto-flow-column.png" alt="grid-auto-flow-column"></p>
+<p>12. grid: none | (grid-template-rows) / (grid-template-columns) | (grid-auto-flow) [(grid-auto-rows) [/ (grid-auto-columns)]];</p>
+<p>是一种简写形式，设置网格容器所有属性。</p>
+<p>属性值：<br>none: 设置为所有属性的默认值。<br>(grid-template-rows) / (grid-template-columns): 设置行和列的值，其他属性为默认值。<br>(grid-auto-flow) [(grid-auto-rows) [ /(grid-auto-columns)]] : 设置网格自动流、网格自动行、网格自动列的值，其他未设置则为默认值。</p>
+<p>例子1：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    grid: 200px auto / 1fr auto 1fr;</div><div class="line">&#125;</div><div class="line">等同于</div><div class="line">.container&#123;</div><div class="line">    grid-template-rows: 200px auto;</div><div class="line">    grid-template-columns: 1fr auto 1fr;</div><div class="line">    grid-template-areas: none;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>例子2：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.container&#123;</div><div class="line">    grid: column 1fr / auto;</div><div class="line">&#125;</div><div class="line">等同于</div><div class="line">.container&#123;</div><div class="line">    grid-auto-flow: column;</div><div class="line">    grid-auto-rows: 1fr;</div><div class="line">    grid-auto-columns: auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>设置在网格项上的属性</strong></p>
+<ul>
+<li>grid-column-start</li>
+<li>grid-column-end</li>
+<li>grid-row-start</li>
+<li>grid-row-end</li>
+<li>grid-column</li>
+<li>grid-row</li>
+<li>grid-area</li>
+<li>justify-self</li>
+<li>align-self</li>
+</ul>
+<p><br></p>
+<p>1. grid-column-start:（number） | （name） | span （number） | span （name） | auto ;<br>    &nbsp;&nbsp;&nbsp;&nbsp;grid-column-end:（number） | （name） | span （number） | span （name） | auto ;<br>    &nbsp;&nbsp;&nbsp;&nbsp;grid-row-start:（number） | （name） | span （number） | span （name） | auto ;<br>    &nbsp;&nbsp;&nbsp;&nbsp;grid-row-end:（number） | （name） | span （number） | span （name） | auto ;</p>
+<p>通过网格线来定义网格项的位置。grid-column-start、grid-row-start定义网格项的开始位置，grid-column-end、grid-row-end定义网格项的结束位置。</p>
+<p>属性值：<br>line: 指定带编号或者名字的网格线。<br>span(number): 跨越轨道的数量。<br>span(name): 跨越轨道直到对应名字的网格线。<br>auto: 自动展示位置，默认跨度为1。</p>
+<p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.item-a&#123;</div><div class="line">  grid-column-start: 2;</div><div class="line">  grid-column-end: five;</div><div class="line">  grid-row-start: row1-start</div><div class="line">  grid-row-end: 3</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-start-end-a.png" alt="grid-start-end-a"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.item-b&#123;</div><div class="line">  grid-column-start: 1;</div><div class="line">  grid-column-end: span col4-start;</div><div class="line">  grid-row-start: 2</div><div class="line">  grid-row-end: span 2</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-start-end-b.png" alt="grid-start-end-a"></p>
+<p>注：如果未声明grid-column-end或grid-row-end，默认将跨越一个轨道。项目也可以重叠，设置z-index来确定堆叠顺序。</p>
+<p>2. grid-column:（start-line） / （end-line） | （start-line） / span （value）;<br>    &nbsp;&nbsp;&nbsp;&nbsp;grid-row:（start-line） / （end-line） | （start-line） / span （value）;</p>
+<p>是 grid-column-start、grid-column-end 和 grid-row-start、grid-row-end 的简写。</p>
+<p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.item-c&#123;</div><div class="line">  grid-column: 3 / span 2;</div><div class="line">  grid-row: third-line / 4;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-start-end-c.png" alt="grid-start-end-c"></p>
+<p>3. grid-area: (name) | (row-start) / (column-start) / (row-end) / (column-end);</p>
+<p>定义网格项名字，以便创建模块（容器属性grid-template-areas来定义模块）。</p>
+<p>属性值：<br>name: 项目名子。<br>(row-start)/(column-start)/(row-end)/(column-end): 可以是数字或网格线名字。</p>
+<p>例子：<br>定义网格项名字：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item-d&#123;</div><div class="line">  grid-area: header</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>通过网格线定位网格项：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item-d&#123;</div><div class="line">  grid-area: 1 / col4-start / last-line / 6 ;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-start-end-d.png" alt="grid-start-end-d"></p>
+<p>4. justify-self:  justify-self: start | end | center | stretch;</p>
+<p>定义单个网格项垂直于列网格线的对齐方式。</p>
+<p>属性值：<br>start:   网格区域左对齐。<br>end:     网格区域右对齐。<br>center:  网格区域居中。<br>stretch: 网格区域填满。</p>
+<p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item-a&#123;</div><div class="line">  justify-self: start;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-justify-self-start.png" alt="grid-justify-self-start"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item-a&#123;</div><div class="line">  justify-self: end;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-justify-self-end.png" alt="grid-justify-self-end"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item-a&#123;</div><div class="line">  justify-self: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-justify-self-center.png" alt="grid-justify-self-center"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item-a&#123;</div><div class="line">  justify-self: stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-justify-self-stretch.png" alt="grid-justify-self-stretch"></p>
+<p>提示：也可以在容器上设置justify-items，达到全部网格项对齐。</p>
+<p>5. align-self: start | end | center | stretch;</p>
+<p>定义单个网格项垂直于行网格线的对齐方式。</p>
+<p>属性值：<br>start:   网格区域顶部对齐。<br>end:     网格区域底部对齐。<br>center:  网格区域居中。<br>stretch: 网格区域填满。</p>
+<p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item-a&#123;</div><div class="line">  align-self: start;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-align-self-start.png" alt="grid-align-self-start"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item-a&#123;</div><div class="line">  align-self: end;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-align-self-end.png" alt="grid-align-self-end"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item-a&#123;</div><div class="line">  align-self: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-align-self-center.png" alt="grid-align-self-center"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item-a&#123;</div><div class="line">  align-self: stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://oh4xqnron.bkt.clouddn.com/grid-align-self-stretch.png" alt="grid-align-self-stretch"></p>
+<p>提示：也可以在容器上设置align-items，达到全部网格项对齐。</p>
 
       
     </div>
